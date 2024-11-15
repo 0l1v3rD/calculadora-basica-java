@@ -15,15 +15,16 @@ public class calculadora{
             System.out.println("3. Multiplicacion");
             System.out.println("4. Division");
             System.out.println("5. Modulo");
-            System.out.println("6. Salir");
+            System.out.println("6. Potencia");
+            System.out.println("7. Salir");
             System.out.print("Elige una opcion: ");
 
             int opcion = leer.nextInt();
 
-            if (opcion >= 1 && opcion <= 4) {
-                System.out.print("Ingresa el primer numero: ");
+            if (opcion >= 1 && opcion <= 6) {
+                System.out.print("Ingresa el primer numero (Para potencias este es el numero base): ");
                 double num1 = leer.nextDouble();
-                System.out.print("Ingresa el segundo numero: ");
+                System.out.print("Ingresa el segundo numero (Para potencias este es a cuanto se eleva el primero): ");
                 double num2 = leer.nextDouble();
 
                 switch (opcion) {
@@ -50,8 +51,11 @@ public class calculadora{
                             System.out.println("Error: No se puede dividir entre cero.");
                         }
                         break;
+                    case 6:
+                        System.out.println("Resultado de la potencia: " + potencia(num1, num2));
+                        break;
                 }
-            } else if (opcion == 6) {
+            } else if (opcion == 7) {
                 continuar = false;
                 System.out.println("Saliendo de la calculadora...");
             } else {
@@ -66,5 +70,6 @@ public class calculadora{
     public static double restar(double a, double b) { return a - b; }
     public static double multiplicar(double a, double b) { return a * b; }
     public static double dividir(double a, double b) { return a / b; }
-    public static double modulo(double a, double b) {return a % b; }    
+    public static double modulo(double a, double b) {return a % b; }
+    public static double potencia(double a, double b) {return Math.pow(a, b);}
 }
