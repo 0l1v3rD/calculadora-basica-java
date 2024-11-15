@@ -1,1 +1,2 @@
-# calculadora-java-basica
+# calculadora-basica-java
+Calculadora para operaciones básicas.

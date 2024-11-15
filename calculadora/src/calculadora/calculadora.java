@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class calculadora{
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner leer;
+        leer = new Scanner(System.in);
         boolean continuar = true;
 
         while (continuar) {
@@ -16,13 +17,13 @@ public class calculadora{
             System.out.println("5. Salir");
             System.out.print("Elige una opción: ");
 
-            int opcion = scanner.nextInt();
+            int opcion = leer.nextInt();
 
             if (opcion >= 1 && opcion <= 4) {
                 System.out.print("Ingresa el primer número: ");
-                double num1 = scanner.nextDouble();
+                double num1 = leer.nextDouble();
                 System.out.print("Ingresa el segundo número: ");
-                double num2 = scanner.nextDouble();
+                double num2 = leer.nextDouble();
 
                 switch (opcion) {
                     case 1:
@@ -50,7 +51,7 @@ public class calculadora{
             }
         }
 
-        scanner.close();
+        leer.close();
     }
 
     public static double sumar(double a, double b) { return a + b; }
